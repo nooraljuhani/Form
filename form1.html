@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+		</script>
+		
+	<title></title>
+</head>
+<style type="text/css">
+		body{
+			text-align: center;
+			background-color: #000;
+			color: #fff;
+		}
+
+	</style>
+<body>
+   
+<form>
+  E-mail: <input type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+  <input type="submit">
+  <br>
+  <br>
+  <input type="password" id="p1" placeholder="Enter passward" >
+  <br>
+  <br>
+   <input type="password" id="p2" placeholder="Confirm Passward" >
+   <div class="FormAlert" style="color:green;" id="d1">
+   	<br>
+   	<input type="tel" pattern="/^[0-9-+]+$/"  placeholder="Mobile Phone Number"  id="p3">
+	
+</form>
+
+   <script type="text/javascript">
+   	   	
+function myFunction() {
+  var x = document.getElementById("myEmail").pattern;
+  document.getElementById().innerHTML = x;
+}
+
+function checkPasswordMatch() {
+        var password =$("#p1").val(passward);
+        var confirmPassword =$("#p2").val(passward);
+        if (password != confirmPassword)
+            $("#d1").html("Passwords does not match!");
+        else
+            $("#d1").html("Passwords match.");
+    }
+    $(document).ready(function () {
+       $("#p2").keyup(checkPasswordMatch);
+    });
+
+
+
+
+
+
+
+   </script>
+</body>
+</html>
